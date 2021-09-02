@@ -11,41 +11,53 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header>
         <nav>
+            <!-- LOGO -->
             <div class="nav-logo">
                 <img class="nav-logo-mark" src="images/prog-hero-book.png" alt="">
                 <h3 class="nav-logo-typo">P-HERO BOOK</h3>
             </div>
+            <!-- NAV BUTTONS -->
             <div class="nav-btn-container">
                 <ul class="nav-buttons">
-                    <li class="nav-btn">Home</li>
+                    <li class="nav-btn nav-home">Home</li>
                     <li class="nav-btn">Contact Us</li>
                     <li class="nav-btn">About Us</li>
                 </ul>
             </div>
         </nav>
     </header>
+    <!-- BODY MAIN SECTION -->
     <main>
+        <!-- SEARCH BAR "INPUT AND SEARCH BUTTON" -->
         <div class="search-bar">
             <div class="search-section">
                 <input type="search" placeholder="Search book" id="search-field">
-                <button class="search-btn">
+                <button class="search-btn" onclick="searchBook()">
                     <img src="images/search-icon.png" alt="" class="search-icon">
                 </button>
             </div>
         </div>
+        <!-- SEARCH RESULT SECTION -->
         <div class="results-info">
-            <div class="results-count">
+            <div id="results-count">
                 <h2>Books</h2>
-                <h3>50 Results found</h3>
+                <div id="counter">
+                    <h3>Results found: </h3>
+                </div>
             </div>
         </div>
-        <div class="search-resut">
-            <div class="search-container">
-                <div class="result-container">
+        <div id="search-result">
+            <!-- ERROR-MESSAGE -->
+            <div id="error">
+                <!-- <p id="error-message">Something Wrong!<br> Try again.</p> -->
+            </div>
+            <div id="search-container">
+                <!-- <div class="result-container">
                     <div class="book-thumb">
-                        <img class="book-img" src="images/1652410-full.jpg" alt="">
+                        <img class="book-img" src="https://covers.openlibrary.org/b/id/${result.cover_i}-M.jpg" alt="">
                     </div>
                     <div class="book">
                         <div class="book-details">
@@ -54,11 +66,12 @@
                         </div>
                         <h4 class="book-release-date">Published: 2018</h4>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </main>
-    <footer></footer>
+
+    <!-- JAVASCRIPTS -->
     <script src="js/app.js"></script>
 </body>
 

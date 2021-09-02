@@ -54,6 +54,10 @@ nav{
     font-size: 18px;
     font-weight: 600;
 }
+.nav-home{
+    color: #8773f9;
+    font-weight: 800;
+}
 
 /* ---------------
     MAIN SECTION 
@@ -110,21 +114,32 @@ nav{
     display: flex;
     justify-content: center;
 }
-.results-count{
+#results-count{
     width: 75%;
     display: flex;
     justify-content: space-between;
+}
+#counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#result-count-num{
+    font-size: 18px;
+    font-weight: 800;
 }
 
 /* -------------------------
     SEARCH RESULT SECTION 
 --------------------------*/
-.search-resut{
+#search-result{
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.search-container{
+#search-container{
     width: 80%;
     display: grid;
     grid-gap: 30px;
@@ -163,9 +178,6 @@ nav{
 .book-name{
     margin: 0px;
 }
-.book-details{
-
-}
 .book-author{
     margin: 0px;
     color: #ff774b;
@@ -174,4 +186,20 @@ nav{
 .book-release-date{
     margin: 0px;
     margin-bottom: 10px;
+}
+
+/* ------------------
+    ERROR MESSAGE
+------------------ */
+#error{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#error-message{
+    font-size: 48px;
+    font-weight: 800;
+    color: #ff774b;
+    margin-top:100px;
 }
