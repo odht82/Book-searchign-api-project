@@ -13,7 +13,9 @@ const searchBook = () => {
 const searchResult = data => {
     const searchContainer = document.getElementById("search-container");
     const errorMessage = document.getElementById("error"); //ERROR DIV
-    errorMessage.textContent = '';
+    const resultCounter = document.getElementById("counter");
+    resultCounter.textContent = ''; //MAKING COUNT RESULT EMPTY FOR NEW RESULTS COUNT
+    errorMessage.textContent = ''; //MAKING ERROR MESSAGE EMPTY FOR NEW RESULTS
     searchContainer.textContent = ''; //MAKING RESULTS EMPTY FOR NEW SEARCH
     if (data.length === 0) {
         const noResultMessage = document.createElement('div');
@@ -38,4 +40,9 @@ const searchResult = data => {
             </div>`;
         searchContainer.appendChild(resultContainer); //RESULT IMPLEMENTATION IN PAGE
     });
+
+    const numOfChildren = searchContainer.children.length;
+    const resultCounted = document.createElement('div');
+    resultCounted.innerHTML = `<h3 id="result-count-num">Results found: ${numOfChildren}</h3>`; //NUMBER OF SEARCH RESULTS
+    resultCounter.appendChild(resultCounted);
 };
